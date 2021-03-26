@@ -1,5 +1,10 @@
-from test import testing
+# for testing 
+# from test import testing
+
+# for live predictions
+from run import testing 
 import argparse
+import time
 
 def run():
     parser = argparse.ArgumentParser(description='Deep Belief Network')
@@ -26,7 +31,10 @@ def run():
         testing(args.csv_filepath,  save_output_image=True , model_path=args.saved_model_path )
 
 if __name__ == "__main__":
+    try:
+        while True:
+            run()
+            time.sleep(3)
 
-    run()
-
-    print(' Done ')
+    except KeyboardInterrupt:
+        print('\nExit')

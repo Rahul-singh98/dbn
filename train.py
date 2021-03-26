@@ -51,16 +51,18 @@ for i in range(60 , len(scaled_train)):
 X_train = np.array(X_train)
 y_train = np.array(y_train)
 
-regressor = SupervisedDBNRegression(hidden_layers_structure=[100],
-                                    learning_rate_rbm=0.001,
-                                    learning_rate=0.001,
-                                    n_epochs_rbm=60,
-                                    n_iter_backprop=800,
-                                    batch_size=32,
-                                    activation_function='relu')
+# regressor = SupervisedDBNRegression(hidden_layers_structure=[100 , 100],
+#                                     learning_rate_rbm=0.001,
+#                                     learning_rate=0.001,
+#                                     n_epochs_rbm=60,
+#                                     n_iter_backprop=200,
+#                                     batch_size=32,
+#                                     activation_function='relu')
 
-regressor.fit(X_train, y_train)
+# regressor.fit(X_train, y_train)
 
-print('*'*15 , ' Model is saving ' , '*'*15)
-regressor.save('./15minregressor.pkl')
-print('*'*15 , ' Model saved ' , '*'*15)
+# print('*'*15 , ' Model is saving ' , '*'*15)
+# regressor.save('./models/15minregressorNew.pkl')
+# print('*'*15 , ' Model saved ' , '*'*15)
+print(X_train[0])
+print(y_train[0])

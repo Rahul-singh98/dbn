@@ -3,3 +3,4 @@ pandas
 matplotlib
 pickleshare
 scikit-learn
+flask
